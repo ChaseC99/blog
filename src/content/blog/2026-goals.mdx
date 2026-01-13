@@ -4,7 +4,7 @@ description: 'My goals and aspirations for 2026.'
 pubDate: 'Jan 01 2026'
 ---
 
-import BingoBoard from '../../components/Bingo/BingoBoard.astro';
+import BingoBoard from '../../components/Bingo/BingoBoard.tsx';
 import companyImage from '../../assets/2026-goals/carnaroli-software-llc.png'
 import sunsetImage from '../../assets/2026-goals/sunset.jpg'
 
@@ -85,7 +85,7 @@ I'll periodically update this board and include a changelog as we make our way t
 
 Wishing you a Happy New Year and the best of luck with your goals 🎉
 
-<BingoBoard items={[
+<BingoBoard client:load items={[
     {title: "Play in a beach volleyball tournament", completed: false},
     {title: "Read 12 books (~1 per month)", completed: false},    
     {title: "Cook Risotto using Carnaroli rice", completed: false},
