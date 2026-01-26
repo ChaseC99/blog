@@ -13,7 +13,7 @@ export default function BingoBoard({ items }: Props) {
     const [backgroundImage, setBackgroundImage] = useState<string | undefined>(undefined);
 
     return (
-        <div style={{
+        <div id="bingo" style={{
             ...styles.bingoGrid,
             backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined,
         }}>
