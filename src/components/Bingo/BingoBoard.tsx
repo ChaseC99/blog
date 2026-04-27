@@ -12,6 +12,17 @@ interface Props {
 export default function BingoBoard({ items }: Props) {
     const [backgroundImage, setBackgroundImage] = useState<string | undefined>(undefined);
 
+    // Preload the completed images 
+    // so that they appear instantly when a card is activated
+    useEffect(() => {
+        items.forEach((item) => {
+            if (item.completedImage) {
+                const image = new Image();
+                image.src = item.completedImage;
+            }
+        });
+    }, [items]);
+
     return (
         <div id="bingo" style={{
             ...styles.bingoGrid,
